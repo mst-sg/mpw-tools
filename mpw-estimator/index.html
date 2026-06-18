@@ -5,75 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>MPW Prototype Estimator — dies per wafer, reticle utilization, indicative cost | MST</title>
 <meta name="description" content="Free open-source MPW prototype estimator: gross dies per wafer, shared-reticle utilization, indicative mature-node cost range, shuttle timing and a tapeout-readiness checklist. By MST Singapore — mature-node MPW & RFQ coordination." />
-<link rel="canonical" href="https://mst-sg.com/tools/mpw-estimator/" />
-<meta name="robots" content="index,follow" />
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "MPW Prototype Estimator",
-  "alternateName": "Mature-node MPW dies-per-wafer and cost estimator",
-  "url": "https://mst-sg.com/tools/mpw-estimator/",
-  "description": "Free browser-based MPW prototype estimator for gross dies per wafer, shared-reticle utilization, indicative mature-node cost range, shuttle timing and tapeout-readiness preparation.",
-  "applicationCategory": "EngineeringApplication",
-  "operatingSystem": "Any",
-  "isAccessibleForFree": true,
-  "browserRequirements": "Modern browser with JavaScript enabled",
-  "codeRepository": "https://github.com/shensi8312/mpw-tools",
-  "creator": {
-    "@type": "Organization",
-    "name": "Moore Solution Technology Pte. Ltd.",
-    "alternateName": "MST Singapore",
-    "url": "https://mst-sg.com",
-    "sameAs": [
-      "https://www.linkedin.com/company/moore-solution",
-      "https://github.com/shensi8312/mpw-tools"
-    ]
-  },
-  "provider": {
-    "@type": "Organization",
-    "name": "MST Singapore",
-    "url": "https://mst-sg.com"
-  },
-  "about": [
-    "MPW prototype planning",
-    "dies per wafer",
-    "reticle utilization",
-    "mature-node tapeout RFQ preparation"
-  ],
-  "featureList": [
-    "Gross dies-per-wafer estimate",
-    "Shared-reticle utilization estimate",
-    "Indicative mature-node cost range",
-    "Tapeout-readiness checklist",
-    "Deep-link to a high-level MPW RFQ"
-  ],
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  }
-}
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1N701965W1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-1N701965W1');
-document.addEventListener('click', function(e) {
-  var el = e.target.closest('a');
-  if (!el || typeof gtag !== 'function') return;
-  var href = el.getAttribute('href') || '';
-  if (href.indexOf('https://store.mst-sg.com/services/mpw-tapeout-rfq') === 0) {
-    gtag('event', 'mpw_tool_rfq_click', { event_category: 'conversion', event_label: 'estimator', page_path: window.location.pathname });
-  } else if (href.indexOf('https://store.mst-sg.com') === 0) {
-    gtag('event', 'store_click', { event_category: 'conversion', event_label: href, page_path: window.location.pathname });
-  } else if (href.indexOf('https://github.com/shensi8312/mpw-tools') === 0) {
-    gtag('event', 'github_click', { event_category: 'engagement', event_label: 'mpw-tools', page_path: window.location.pathname });
-  }
-});
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script>document.documentElement.className='js';</script>
@@ -135,9 +66,41 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--faint);font-f
 footer a{color:var(--dim);text-decoration:none}footer a:hover{color:var(--signal)}
 @media(max-width:820px){.grid{grid-template-columns:1fr}.out{grid-template-columns:1fr}.metric{border-right:0}}
 </style>
+<link rel="stylesheet" href="/tools/assets/mst-site-header.css">
 </head>
 <body>
-<header><div class="wrap brand"><span class="m">M</span><span>MST<small>Moore Solution Tech</small></span><a class="store" href="https://store.mst-sg.com/services/mpw-tapeout-rfq" target="_blank" rel="noopener">Submit MPW RFQ ↗</a></div></header>
+<header id="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="/" aria-label="MST Home">
+      <img
+        src="/wp-content/themes/mst-sg-theme-v2/assets/images/logo-header.png"
+        alt="Moore Solution Technology"
+        class="brand-logo"
+        width="44"
+        height="44"
+        loading="eager"
+        decoding="async"
+      >
+    </a>
+    <nav class="navlinks" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="https://store.mst-sg.com/?utm_source=mst-sg&amp;utm_medium=tools&amp;utm_campaign=store_entrance&amp;utm_content=nav_store_rfq" target="_blank" rel="noopener">Store / RFQ</a>
+      <a href="/mpw/">MPW</a>
+      <a href="/pid-to-native-solidworks-assembly/">P&amp;ID to SolidWorks</a>
+      <a href="/tools/">Tools</a>
+      <a href="/solutions/">Design Automation</a>
+      <a href="/news/">News</a>
+    </nav>
+    <div class="lang-switch" aria-label="Language">
+      <a href="/tools/mpw-estimator/?lang=en" lang="en" hreflang="en" class="is-active">EN</a>
+      <span aria-hidden="true">/</span>
+      <a href="/tools/mpw-estimator/?lang=zh" lang="zh" hreflang="zh">中文</a>
+    </div>
+    <div class="nav-actions-redesign">
+      <a class="nav-mail" href="https://qiye.aliyun.com" target="_blank" rel="noopener">Mail</a>
+    </div>
+  </div>
+</header>
 
 <section class="hero"><div class="wrap">
   <span class="mono eyebrow">Free · Open-source · Mature-node MPW</span>
@@ -280,5 +243,6 @@ function calc(){
 }
 calc();
 </script>
+<script src="/tools/assets/mst-tool-analytics.js"></script>
 </body>
 </html>

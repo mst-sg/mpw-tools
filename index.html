@@ -50,25 +50,6 @@
   }
 }
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1N701965W1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-1N701965W1');
-document.addEventListener('click', function(e) {
-  var el = e.target.closest('a');
-  if (!el || typeof gtag !== 'function') return;
-  var href = el.getAttribute('href') || '';
-  if (href.indexOf('https://store.mst-sg.com') === 0) {
-    gtag('event', 'tools_store_click', {event_category:'conversion', event_label:href, page_path:window.location.pathname});
-  } else if (href.indexOf('https://github.com') === 0) {
-    gtag('event', 'tools_github_click', {event_category:'engagement', event_label:href, page_path:window.location.pathname});
-  } else if (href.indexOf('/tools/') === 0 || href.indexOf('https://mst-sg.com/tools/') === 0) {
-    gtag('event', 'tools_directory_click', {event_category:'engagement', event_label:href, page_path:window.location.pathname});
-  }
-});
-</script>
 <style>
 :root{
   --ink:#0a0d12;--ink2:#0f141c;--panel:#121922;--panel2:#161e29;
@@ -377,5 +358,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
     <span><a href="/mpw/">MPW</a> · <a href="/pid-to-native-solidworks-assembly/">P&amp;ID to SolidWorks</a> · <a href="mailto:sales@mst-sg.com">sales@mst-sg.com</a></span>
   </div>
 </footer>
+<script src="/tools/assets/mst-tool-analytics.js"></script>
 </body>
 </html>
