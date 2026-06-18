@@ -134,3 +134,11 @@ XYZ-2,,5,Valve,`);
   assert.ok(result.rowIssues.some((issue) => issue.row === 2 && issue.issues.includes('manufacturer')));
   assert.match(result.csv, /mpn,manufacturer,quantity,description,drawing/);
 });
+
+test('BOM RFQ normalizer neutralizes spreadsheet formula cells in exported CSV', () => {
+  const result = normalizeBomRfq(`Part Number,Manufacturer,Qty,Description
+=2+2,+MFG,-5,@desc`);
+
+  assert.equal(result.rows[0].mpn, '=2+2');
+  assert.match(result.csv, /'=2\+2,'\+MFG,'-5,'@desc/);
+});
