@@ -7,6 +7,7 @@ Positioning rule: MST is not a wafer foundry. Say "MPW aggregation", "RFQ coordi
 ## Links
 
 - Tools directory: https://mst-sg.com/tools/
+- Chinese tools directory: https://mst-sg.com/tools/?lang=zh
 - GitHub: https://github.com/shensi8312/mpw-tools
 - MPW hub: https://mst-sg.com/mpw/
 - MPW RFQ intake: https://store.mst-sg.com/services/mpw-tapeout-rfq
@@ -49,10 +50,28 @@ MST Open Tools is now open-source: 15 browser tools for mature-node MPW planning
 Live:
 https://mst-sg.com/tools/
 
+Chinese UI:
+https://mst-sg.com/tools/?lang=zh
+
 Source:
 https://github.com/shensi8312/mpw-tools
 
 MST is an MPW aggregation and RFQ coordination partner, not a wafer foundry. Tool output is planning/RFQ-prep only, not a quote or capacity guarantee.
+
+## Bilingual Update Post
+
+MST Open Tools now has English and Chinese UI support across the static tool directory.
+
+The tools are still browser-first and open-source: MPW RFQ preparation, tapeout readiness checking, shuttle schedule filtering, local-only GDSII metadata inspection, P&ID/SOLIDWORKS intake, UHP gas-stick review and BOM RFQ cleanup.
+
+Live:
+https://mst-sg.com/tools/
+
+Chinese:
+https://mst-sg.com/tools/?lang=zh
+
+Source:
+https://github.com/shensi8312/mpw-tools
 
 ## X Post
 

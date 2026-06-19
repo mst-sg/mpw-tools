@@ -1,6 +1,10 @@
 (function () {
   var Core = window.MSTOpenToolsCore;
+  var I18n = window.MSTStaticI18n;
+  var lang = I18n ? I18n.currentLang() : 'en';
+  function tr(value) { return I18n ? I18n.t(value, lang) : value; }
   var config = JSON.parse(document.getElementById('tool-config').textContent);
+  if (I18n) config = I18n.translateToolConfig(config, lang);
   var app = document.getElementById('toolApp');
 
   function h(tag, attrs, children) {
@@ -164,36 +168,36 @@
       h('div', {}, [h('div', { class: 'mono eyebrow', text: config.eyebrow }), h('h1', {}, [document.createTextNode(config.headingPrefix + ' '), h('span', { text: config.headingAccent })]), h('p', { class: 'lede', text: config.lede })]),
       h('div', { class: 'privacy' }, [h('b', { text: config.boundaryLead }), document.createTextNode(' ' + config.boundary)])
     ])]));
-    var form = h('form', { class: 'panel sticky', id: 'toolForm' }, [h('h2', { text: 'Inputs' }), h('p', { class: 'section-note', text: config.inputNote })]);
+    var form = h('form', { class: 'panel sticky', id: 'toolForm' }, [h('h2', { text: tr('Inputs') }), h('p', { class: 'section-note', text: config.inputNote })]);
     for (var i = 0; i < config.fields.length; i += 2) {
       form.appendChild(h('div', { class: 'grid2' }, config.fields.slice(i, i + 2).map(renderField)));
     }
     if (config.checks && config.checks.length) {
-      form.appendChild(h('h2', { text: 'Readiness checks' }));
+      form.appendChild(h('h2', { text: tr('Readiness checks') }));
       form.appendChild(h('div', { class: 'checks' }, config.checks.map(renderCheck)));
     }
     var results = h('div', {}, [
       h('div', { class: 'summary' }, [
-        h('div', { class: 'score' }, [h('div', {}, [h('div', { class: 'n', id: 'scoreNumber', text: '0' }), h('div', { class: 't', id: 'scoreLabel', text: 'score' })])]),
-        h('div', { class: 'status' }, [h('b', { id: 'statusTitle', text: 'Ready' }), h('p', { id: 'statusText', text: '' }), h('ul', { class: 'list', id: 'issueList' })])
+        h('div', { class: 'score' }, [h('div', {}, [h('div', { class: 'n', id: 'scoreNumber', text: '0' }), h('div', { class: 't', id: 'scoreLabel', text: tr('score') })])]),
+        h('div', { class: 'status' }, [h('b', { id: 'statusTitle', text: tr('Ready') }), h('p', { id: 'statusText', text: '' }), h('ul', { class: 'list', id: 'issueList' })])
       ]),
-      h('div', { class: 'panel' }, [h('h2', { text: 'Generated output' }), h('pre', { class: 'output', id: 'output' }), h('div', { class: 'actions' }, [
-        h('button', { class: 'btn', type: 'button', id: 'copyBtn', text: 'Copy output' }),
-        h('button', { class: 'btn ghost', type: 'button', id: 'mdBtn', text: 'Download Markdown' }),
-        h('button', { class: 'btn ghost', type: 'button', id: 'csvBtn', text: 'Download CSV' }),
-        h('a', { class: 'btn ghost', href: 'https://store.mst-sg.com/services/mpw-tapeout-rfq?utm_source=mst-sg&utm_medium=tool&utm_campaign=' + config.slug, target: '_blank', rel: 'noopener', text: 'Submit RFQ' })
+      h('div', { class: 'panel' }, [h('h2', { text: tr('Generated output') }), h('pre', { class: 'output', id: 'output' }), h('div', { class: 'actions' }, [
+        h('button', { class: 'btn', type: 'button', id: 'copyBtn', text: tr('Copy output') }),
+        h('button', { class: 'btn ghost', type: 'button', id: 'mdBtn', text: tr('Download Markdown') }),
+        h('button', { class: 'btn ghost', type: 'button', id: 'csvBtn', text: tr('Download CSV') }),
+        h('a', { class: 'btn ghost', href: 'https://store.mst-sg.com/services/mpw-tapeout-rfq?utm_source=mst-sg&utm_medium=tool&utm_campaign=' + config.slug, target: '_blank', rel: 'noopener', text: tr('Submit RFQ') })
       ])])
     ]);
     app.appendChild(h('section', { class: 'wrap app' }, [form, results]));
-    app.appendChild(h('footer', {}, [h('div', { class: 'wrap foot' }, [h('span', { text: '© 2023-2026 Moore Solution Technology Pte. Ltd. Singapore' }), h('span', {}, [h('a', { href: '/tools/', text: 'Tools' }), document.createTextNode(' · '), h('a', { href: '/mpw/', text: 'MPW' }), document.createTextNode(' · '), h('a', { href: 'mailto:sales@mst-sg.com', text: 'sales@mst-sg.com' })])])]));
-    app.appendChild(h('div', { class: 'toast', id: 'toast', text: 'Copied' }));
+    app.appendChild(h('footer', {}, [h('div', { class: 'wrap foot' }, [h('span', { text: '© 2023-2026 Moore Solution Technology Pte. Ltd. Singapore' }), h('span', {}, [h('a', { href: '/tools/', text: tr('Tools') }), document.createTextNode(' · '), h('a', { href: '/mpw/', text: 'MPW' }), document.createTextNode(' · '), h('a', { href: 'mailto:sales@mst-sg.com', text: 'sales@mst-sg.com' })])])]));
+    app.appendChild(h('div', { class: 'toast', id: 'toast', text: tr('Copied') }));
     config.fields.concat(config.checks || []).forEach(function (field) {
       var input = document.getElementById(field.id);
       input.addEventListener('input', renderResult);
       input.addEventListener('change', renderResult);
     });
     document.getElementById('copyBtn').onclick = function () {
-      navigator.clipboard.writeText(document.getElementById('output').textContent).then(function () { showToast('Output copied'); });
+      navigator.clipboard.writeText(document.getElementById('output').textContent).then(function () { showToast(tr('Output copied')); });
     };
     document.getElementById('mdBtn').onclick = function () { download(config.slug + '.md', 'text/markdown;charset=utf-8', document.getElementById('output').textContent); };
     renderResult();

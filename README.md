@@ -2,11 +2,15 @@
 
 Free browser tools for mature-node MPW planning, non-confidential RFQ preparation, local-only GDSII inspection, P&ID-to-SOLIDWORKS intake, UHP gas-stick review, and sourcing cleanup.
 
+The live tools include English and Chinese UI support. Use `?lang=zh`, `?lang=en`, or the browser language preference.
+
 Built by [MST](https://mst-sg.com). MST is not a wafer foundry and does not manufacture wafers directly. These tools help engineers prepare safer first conversations before NDA, partner confirmation, and any design-detail exchange.
 
 ## Use Them Live
 
 Main directory: https://mst-sg.com/tools/
+
+Chinese UI: https://mst-sg.com/tools/?lang=zh
 
 | Tool | Use case | Live URL |
 | --- | --- | --- |
@@ -33,6 +37,7 @@ https://store.mst-sg.com/services/mpw-tapeout-rfq
 
 - `tools/`: live static tool pages, shared CSS/JS assets, and browser-safe core logic.
 - `tools/assets/open-tools-core.js`: reusable pure functions for schedule filtering, manifest building, PDK checklists, tag parsing, package suggestions, timeline planning, BOM checks, UHP checklisting, and RFQ CSV normalization.
+- `tools/assets/mst-static-i18n.js`: browser-side English/Chinese UI translations for the static tools.
 - `tools/tests/`: Node test coverage for the shared tool logic.
 - `access-map.csv`: open MPW route comparison data used by MST's public access map.
 - root tool folders: earlier standalone copies kept for compatibility with existing links and forks.
@@ -55,7 +60,7 @@ http://localhost:8080/tools/
 Run logic tests:
 
 ```bash
-node --test tools/tests/open-tools-core.test.js tools/tests/mpw-readiness-core.test.js
+node --test tools/tests/open-tools-core.test.js tools/tests/mpw-readiness-core.test.js tools/tests/tool-analytics.test.js tools/tests/static-i18n.test.js
 ```
 
 ## Privacy And Scope
