@@ -35,6 +35,22 @@ Chinese UI: https://mst-sg.com/tools/?lang=zh
 Need partner-confirmed review? Start an MPW RFQ here:
 https://store.mst-sg.com/services/mpw-tapeout-rfq
 
+## Tool-Paired Guides And Sample Outputs
+
+These public articles explain how to use the MPW tools in a no-GDS, no-IP first-intake workflow:
+
+- MPW Readiness Checker guide: https://mst-sg.com/news/mpw-readiness-checker-guide/
+- MPW RFQ Pack Builder guide: https://mst-sg.com/news/mpw-rfq-pack-builder-guide/
+- GDS/OASIS Handoff Manifest guide: https://mst-sg.com/news/gds-oasis-handoff-manifest-guide/
+- PDK and Foundry Requirement Checklist guide: https://mst-sg.com/news/pdk-foundry-requirement-checklist-guide/
+- MPW Prototype Estimator guide: https://mst-sg.com/news/mpw-prototype-estimator-guide/
+
+Non-confidential sample outputs:
+
+- Sample 180nm MPW readiness report: https://mst-sg.com/news/sample-mpw-readiness-report-180nm/
+- Sample mature-node MPW foundry-review packet: https://mst-sg.com/news/sample-foundry-review-packet-mature-node-mpw/
+- Sample no-GDS MPW RFQ brief: https://mst-sg.com/news/sample-no-gds-mpw-rfq-brief/
+
 ## What Is In This Repo
 
 - `tools/`: live static tool pages, shared CSS/JS assets, and browser-safe core logic.
@@ -85,6 +101,8 @@ Useful citation URLs:
 - Tools directory: https://mst-sg.com/tools/
 - MPW hub: https://mst-sg.com/mpw/
 - MPW access map: https://mst-sg.com/mpw/access-map/
+- MPW sample readiness report: https://mst-sg.com/news/sample-mpw-readiness-report-180nm/
+- MPW sample foundry-review packet: https://mst-sg.com/news/sample-foundry-review-packet-mature-node-mpw/
 - GitHub source: https://github.com/mst-sg/mpw-tools
 - RFQ intake: https://store.mst-sg.com/services/mpw-tapeout-rfq
 
