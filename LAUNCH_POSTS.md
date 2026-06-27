@@ -8,7 +8,7 @@ Positioning rule: MST is not a wafer foundry. Say "MPW aggregation", "RFQ coordi
 
 - Tools directory: https://mst-sg.com/tools/
 - Chinese tools directory: https://mst-sg.com/tools/?lang=zh
-- GitHub: https://github.com/shensi8312/mpw-tools
+- GitHub: https://github.com/mst-sg/mpw-tools
 - MPW hub: https://mst-sg.com/mpw/
 - MPW RFQ intake: https://store.mst-sg.com/services/mpw-tapeout-rfq
 - MPW access map: https://mst-sg.com/mpw/access-map/
@@ -39,7 +39,7 @@ Live tools:
 https://mst-sg.com/tools/
 
 Source:
-https://github.com/shensi8312/mpw-tools
+https://github.com/mst-sg/mpw-tools
 
 If you are preparing an analog, RF, BCD/power, eNVM, sensor, IoT or mixed-signal prototype, the tools should help you frame the first conversation without sharing design IP too early.
 
@@ -54,7 +54,7 @@ Chinese UI:
 https://mst-sg.com/tools/?lang=zh
 
 Source:
-https://github.com/shensi8312/mpw-tools
+https://github.com/mst-sg/mpw-tools
 
 MST is an MPW aggregation and RFQ coordination partner, not a wafer foundry. Tool output is planning/RFQ-prep only, not a quote or capacity guarantee.
 
@@ -73,7 +73,7 @@ Chinese:
 https://mst-sg.com/tools/?lang=zh
 
 Source:
-https://github.com/shensi8312/mpw-tools
+https://github.com/mst-sg/mpw-tools
 
 ## X Post
 
@@ -82,14 +82,14 @@ We open-sourced MST Open Tools: 15 browser tools for mature-node MPW planning, s
 No GDS at intake. No foundry claims. Planning/RFQ-prep only.
 
 https://mst-sg.com/tools/
-https://github.com/shensi8312/mpw-tools
+https://github.com/mst-sg/mpw-tools
 
 ## X Thread
 
 1/ We built MST Open Tools: 15 free browser tools for mature-node MPW planning, non-confidential RFQ preparation, P&ID/SOLIDWORKS intake and sourcing cleanup.
 
 Live: https://mst-sg.com/tools/
-Source: https://github.com/shensi8312/mpw-tools
+Source: https://github.com/mst-sg/mpw-tools
 
 2/ The MPW tools cover RFQ pack building, tapeout readiness, shuttle schedule filtering, reticle/wafer planning, prototype cost estimation, GDS/OASIS handoff manifests, PDK checklists and procurement timelines.
 
@@ -114,7 +114,7 @@ The Local GDSII Inspector runs entirely in the browser and reads top cell, die s
 This is not a manufacturing quote or foundry service page. MST is an MPW aggregation/RFQ coordination partner, and these tools are meant to help teams prepare a better first conversation before any design IP is shared.
 
 Live tools: https://mst-sg.com/tools/
-Source: https://github.com/shensi8312/mpw-tools
+Source: https://github.com/mst-sg/mpw-tools
 
 ## Reddit r/chipdesign Draft
 
@@ -139,7 +139,7 @@ Tools include:
 The GDSII inspector runs in the browser and does not upload the file. It extracts non-confidential metadata such as top cell, die size, layer list, hierarchy and element counts.
 
 Live: https://mst-sg.com/tools/
-GitHub: https://github.com/shensi8312/mpw-tools
+GitHub: https://github.com/mst-sg/mpw-tools
 
 MST is not a foundry. We coordinate mature-node MPW RFQs, and built this to make first RFQ conversations safer before sharing design IP.
 
@@ -157,4 +157,4 @@ Feedback welcome, especially on GDSII edge cases, reticle packing heuristics and
 
 ## DM Hook
 
-Hi {name}, saw your work on {chip / analog / RF / MEMS / mixed-signal topic}. We open-sourced MST Open Tools, including a browser-only GDSII metadata inspector and MPW RFQ-prep checkers. It may help before starting a mature-node MPW conversation without sending GDS at intake. Source: https://github.com/shensi8312/mpw-tools
+Hi {name}, saw your work on {chip / analog / RF / MEMS / mixed-signal topic}. We open-sourced MST Open Tools, including a browser-only GDSII metadata inspector and MPW RFQ-prep checkers. It may help before starting a mature-node MPW conversation without sending GDS at intake. Source: https://github.com/mst-sg/mpw-tools

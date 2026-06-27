@@ -47,7 +47,7 @@ test('tool analytics classifies conversion and discovery links', () => {
     'tool_email_click',
   );
   assert.equal(
-    classifyInteraction({ tagName: 'A', href: 'https://github.com/shensi8312/mpw-tools' }).eventName,
+    classifyInteraction({ tagName: 'A', href: 'https://github.com/mst-sg/mpw-tools' }).eventName,
     'tool_github_click',
   );
   assert.equal(

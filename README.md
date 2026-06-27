@@ -49,7 +49,7 @@ https://store.mst-sg.com/services/mpw-tapeout-rfq
 ## Run Locally
 
 ```bash
-git clone https://github.com/shensi8312/mpw-tools.git
+git clone https://github.com/mst-sg/mpw-tools.git
 cd mpw-tools
 python3 -m http.server 8080
 ```
@@ -85,7 +85,7 @@ Useful citation URLs:
 - Tools directory: https://mst-sg.com/tools/
 - MPW hub: https://mst-sg.com/mpw/
 - MPW access map: https://mst-sg.com/mpw/access-map/
-- GitHub source: https://github.com/shensi8312/mpw-tools
+- GitHub source: https://github.com/mst-sg/mpw-tools
 - RFQ intake: https://store.mst-sg.com/services/mpw-tapeout-rfq
 
 ## Contributing
