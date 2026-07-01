@@ -67,6 +67,9 @@ Chinese UI: https://mst-sg.com/tools/?lang=zh
 Need partner-confirmed review? Start an MPW RFQ here:
 https://store.mst-sg.com/services/mpw-tapeout-rfq
 
+Prefer to start from a plain Markdown checklist? Use the MPW first brief template:
+https://github.com/mst-sg/mpw-tools/blob/main/templates/mpw-first-brief-template.md
+
 ## Tool-Paired Guides And Sample Outputs
 
 These public articles explain how to use the MPW tools in a no-GDS, no-IP first-intake workflow:
@@ -91,6 +94,7 @@ Non-confidential sample outputs:
 - `tools/assets/mst-tool-contact.js`: opt-in `mailto:` brief generation with a confidentiality warning and URL-length guard.
 - `tools/assets/mst-tool-schema.js`: client-side `SoftwareApplication` structured data for the live static tools.
 - `tools/tests/`: Node test coverage for the shared tool logic.
+- `templates/mpw-first-brief-template.md`: no-GDS MPW first brief template for public-intake RFQ preparation.
 - `access-map.csv`: open MPW route comparison data used by MST's public access map.
 - root tool folders: earlier standalone copies kept for compatibility with existing links and forks.
 
@@ -137,6 +141,7 @@ Useful citation URLs:
 - Overseas MPW RFQ path: https://mst-sg.com/news/overseas-mature-node-mpw-rfq-path/
 - MPW sample readiness report: https://mst-sg.com/news/sample-mpw-readiness-report-180nm/
 - MPW sample foundry-review packet: https://mst-sg.com/news/sample-foundry-review-packet-mature-node-mpw/
+- MPW first brief template: https://github.com/mst-sg/mpw-tools/blob/main/templates/mpw-first-brief-template.md
 - GitHub source: https://github.com/mst-sg/mpw-tools
 - RFQ intake: https://store.mst-sg.com/services/mpw-tapeout-rfq
 
