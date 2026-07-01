@@ -187,8 +187,8 @@
         h('button', { class: 'btn', type: 'button', id: 'copyBtn', text: tr('Copy output') }),
         h('button', { class: 'btn ghost', type: 'button', id: 'mdBtn', text: tr('Download Markdown') }),
         h('button', { class: 'btn ghost', type: 'button', id: 'csvBtn', text: tr('Download CSV') }),
-        h('a', { class: 'btn ghost', href: 'https://store.mst-sg.com/services/mpw-tapeout-rfq?utm_source=mst-sg&utm_medium=tool&utm_campaign=' + config.slug, target: '_blank', rel: 'noopener', text: tr('Submit RFQ') }),
-        h('a', { class: 'btn ghost', id: 'emailBtn', href: 'mailto:sales@mst-sg.com', 'data-tool-contact': '1', 'data-output': '#output', 'data-title': config.title, text: tr('Email MST') })
+        h('a', { class: 'btn ghost', href: 'https://store.mst-sg.com/services/mpw-tapeout-rfq?utm_source=mst-sg&utm_medium=tool&utm_campaign=' + config.slug, target: '_blank', rel: 'noopener', text: tr('Send this brief for review') }),
+        h('a', { class: 'btn ghost', id: 'emailBtn', href: 'mailto:sales@mst-sg.com', 'data-tool-contact': '1', 'data-output': '#output', 'data-title': config.title, text: tr('Email this brief to MST') })
       ])])
     ]);
     app.appendChild(h('section', { class: 'wrap app' }, [form, results]));

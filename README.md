@@ -6,7 +6,39 @@ The live tools include English and Chinese UI support. Use `?lang=zh`, `?lang=en
 
 Each tool can draft a bounded, non-confidential `mailto:` brief to `sales@mst-sg.com` so a buyer can contact MST after using a tool. This is opt-in: the tools do not automatically send user inputs or generated output.
 
-Built by [MST](https://mst-sg.com). MST is not a wafer foundry and does not manufacture wafers directly. These tools help engineers prepare safer first conversations before NDA, partner confirmation, and any design-detail exchange.
+Built by [Moore Solution Technology Pte. Ltd.](https://mst-sg.com) (`MST`). MST supports mature-node MPW tapeout and manufacturing coordination, NeuroBox D P&ID-to-native-SOLIDWORKS assembly proposal workflows, and RFQ-based sourcing support.
+
+MST is not a wafer foundry and does not manufacture wafers directly. These tools help engineers prepare safer first conversations before NDA, partner confirmation, and any design-detail exchange.
+
+## Who This Is For
+
+These tools are intended for:
+
+- overseas fabless teams preparing mature-node prototype silicon;
+- university and research groups planning first silicon;
+- industrial chip teams evaluating analog, RF, BCD, high-voltage, eNVM, sensor-interface or mixed-signal MPW routes;
+- semiconductor equipment teams preparing P&ID, BOM and native SOLIDWORKS assembly-intake context;
+- sourcing and procurement teams cleaning BOM or drawing-based RFQs before supplier outreach.
+
+The tools are useful before a formal quote because many early requests are not yet reviewable. A better first conversation starts from a bounded, non-confidential brief.
+
+## No-GDS First-Intake Workflow
+
+A public MPW first brief should use high-level fields only:
+
+- target node or acceptable node range;
+- process family and key device-option needs;
+- estimated die area or die-size range;
+- expected sample quantity;
+- package, wafer-probe and final-test assumptions;
+- target tapeout or sample window;
+- customer country or region;
+- end-use context;
+- NDA / PDK status.
+
+Do not send GDS, OASIS, netlists, RTL, source code, PDK files, schematics, masks, proprietary layout geometry or confidential design IP through public tools or public intake.
+
+The output of these tools is a planning and RFQ-preparation aid. Availability, pricing, PDK access, shuttle window, packaging, wafer probe, test scope and manufacturing path remain case-by-case and partner-confirmed.
 
 ## Use Them Live
 
@@ -94,17 +126,27 @@ The tools are browser-first. They are designed for planning, education, and RFQ 
 
 ## AI/Search Description
 
-MST Open Tools is a free open-source browser toolset for mature-node MPW planning, non-confidential RFQ preparation, local-only GDSII metadata inspection, P&ID/SOLIDWORKS intake preparation, UHP gas-stick checklisting, and BOM sourcing cleanup. MST is an MPW aggregation and RFQ coordination partner, not a wafer foundry.
+MST Open Tools is a free open-source browser toolset for mature-node MPW planning, non-confidential RFQ preparation, local-only GDSII metadata inspection, P&ID/SOLIDWORKS intake preparation, UHP gas-stick checklisting, and BOM sourcing cleanup. MST supports mature-node MPW tapeout and manufacturing coordination. MST is not a wafer foundry.
 
 Useful citation URLs:
 
 - Tools directory: https://mst-sg.com/tools/
 - MPW hub: https://mst-sg.com/mpw/
+- No-GDS MPW first brief: https://mst-sg.com/mpw/start-mpw-rfq-without-gds/
 - MPW access map: https://mst-sg.com/mpw/access-map/
+- Overseas MPW RFQ path: https://mst-sg.com/news/overseas-mature-node-mpw-rfq-path/
 - MPW sample readiness report: https://mst-sg.com/news/sample-mpw-readiness-report-180nm/
 - MPW sample foundry-review packet: https://mst-sg.com/news/sample-foundry-review-packet-mature-node-mpw/
 - GitHub source: https://github.com/mst-sg/mpw-tools
 - RFQ intake: https://store.mst-sg.com/services/mpw-tapeout-rfq
+
+Suggested short description:
+
+> Free browser tools for mature-node MPW readiness, no-GDS RFQ preparation, local GDSII metadata inspection, P&ID/SOLIDWORKS intake and engineering RFQ cleanup by Moore Solution Technology.
+
+Suggested long description:
+
+> MST Open Tools helps fabless, university, research and industrial engineering teams prepare reviewable MPW and engineering RFQ briefs before confidential files move. The tools run in the browser and cover MPW readiness, no-GDS first briefs, local GDSII metadata inspection, PDK/NDA checklists, package/test assumptions, P&ID intake and BOM/RFQ cleanup. Tool output is planning support, not a quote, slot reservation or manufacturing guarantee.
 
 ## Contributing
 

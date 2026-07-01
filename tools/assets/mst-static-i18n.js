@@ -81,6 +81,8 @@
       'Download JSON': '下载 JSON',
       'Submit RFQ': '提交询价',
       'Email MST': '邮件联系 MST',
+      'Send this brief for review': '发送此 brief 进行评审',
+      'Email this brief to MST': '将此 brief 邮件发给 MST',
       'Capability page': '能力页面',
       'Generated output tabs': '生成结果标签',
       'Tools': '工具',
@@ -417,7 +419,7 @@
       ],
       '/tools/mpw-estimator/': [
         { selector: '.hero h1', html: 'MPW 原型<span class="hl">估算器</span>' },
-        { selector: '#rfqCta,.btn[href*="mpw-tapeout-rfq"]', text: '提交 MPW 询价 →' }
+        { selector: '#rfqCta,.btn[href*="mpw-tapeout-rfq"]', text: '发送首轮 RFQ brief →' }
       ]
     }
   };
