@@ -10,6 +10,14 @@ Built by [Moore Solution Technology Pte. Ltd.](https://mst-sg.com) (`MST`). MST 
 
 MST is not a wafer foundry and does not manufacture wafers directly. These tools help engineers prepare safer first conversations before NDA, partner confirmation, and any design-detail exchange.
 
+## Run a complete MPW handoff exercise
+
+[Start the tutorial](https://mst-sg.com/news/gdsii-drc-lvs-requirements-for-mpw-tapeout/?utm_source=github&utm_medium=repository&utm_campaign=sg_mpw_handoff_lab) · [Read the handbook](https://mst-sg.com/tools/mpw-handoff-handbook/?utm_source=github&utm_medium=repository&utm_campaign=sg_mpw_handoff_lab) · [Browse the independent sample pack](examples/mpw-handoff-lab/)
+
+**Input:** two MST-owned synthetic GDS revisions, report metadata and checklist templates. **Run:** `cd examples/mpw-handoff-lab && python3 verify.py`; optionally install `requirements.txt` in a virtual environment and run `python inspect.py`. **Expected output:** checksum PASS; revision B has one top cell, two cells, three layer/datatype pairs and a 120 × 60 µm bounding box. The intentionally stale DRC metadata produces two mismatches; the corrected fixture is consistent.
+
+[Check the report revision in your browser](https://mst-sg.com/tools/report-revision-check/?utm_source=github&utm_medium=repository&utm_campaign=sg_mpw_handoff_lab). Everything in the pack is synthetic and MIT licensed. No DRC/LVS was run; matching metadata is not foundry signoff. The SG website is released from its separate canonical repository; this repository distributes public examples.
+
 ## Who This Is For
 
 These tools are intended for:
@@ -160,3 +168,7 @@ Issues and PRs are welcome. Keep new tools static, dependency-light, privacy-pre
 ## License
 
 [MIT](./LICENSE) © 2026 MST Singapore. Indicative outputs only.
+
+## Repository traffic snapshots
+
+Use the existing authenticated `gh` CLI: `python3 scripts/github-traffic.py mst-sg/mpw-tools --output /private/path/traffic-YYYY-MM-DD.json`. Keep snapshots private. Views and clones cover GitHub’s rolling 14 days, not website visitors or completed tool tasks. Collect weekly and deduplicate UTC daily rows when reviewing a full 28-day period; missing history remains unknown.
