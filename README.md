@@ -73,7 +73,7 @@ Chinese UI: https://mst-sg.com/tools/?lang=zh
 | BOM RFQ Normalizer | Normalize buyer BOM rows into sourcing-ready RFQ CSV | https://mst-sg.com/tools/bom-rfq-normalizer/ |
 
 Need partner-confirmed review? Start an MPW RFQ here:
-https://store.mst-sg.com/services/mpw-tapeout-rfq
+https://mstchip.com/mpw#mpw-inquiry-form
 
 Prefer to start from a plain Markdown checklist? Use the MPW first brief template:
 https://github.com/mst-sg/mpw-tools/blob/main/templates/mpw-first-brief-template.md
@@ -151,7 +151,7 @@ Useful citation URLs:
 - MPW sample foundry-review packet: https://mst-sg.com/news/sample-foundry-review-packet-mature-node-mpw/
 - MPW first brief template: https://github.com/mst-sg/mpw-tools/blob/main/templates/mpw-first-brief-template.md
 - GitHub source: https://github.com/mst-sg/mpw-tools
-- RFQ intake: https://store.mst-sg.com/services/mpw-tapeout-rfq
+- RFQ intake: https://mstchip.com/mpw#mpw-inquiry-form
 
 Suggested short description:
 
