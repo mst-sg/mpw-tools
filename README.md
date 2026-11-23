@@ -1,10 +1,10 @@
 # MST Open Tools
 
-Free browser tools for mature-node MPW planning, non-confidential RFQ preparation, local-only GDSII inspection, P&ID-to-SOLIDWORKS intake, UHP gas-stick review, and sourcing cleanup.
+Free browser tools for mature-node MPW planning, non-confidential RFQ preparation, GDSII inspection, P&ID-to-SOLIDWORKS intake, UHP gas-stick review, and sourcing cleanup.
 
 The live tools include English and Chinese UI support. Use `?lang=zh`, `?lang=en`, or the browser language preference.
 
-Each tool can draft a bounded, non-confidential `mailto:` brief to `sales@mst-sg.com` so a buyer can contact MST after using a tool. This is opt-in: the tools do not automatically send user inputs or generated output.
+Tools with an email option can prepare a non-confidential `mailto:` brief to `sales@mst-sg.com` for you to review before sending. The hosted GDSII Inspector has a separate file submission step described below.
 
 Built by [Moore Solution Technology Pte. Ltd.](https://mst-sg.com) (`MST`). MST supports mature-node MPW tapeout and manufacturing coordination, NeuroBox D P&ID-to-native-SOLIDWORKS assembly proposal workflows, and RFQ-based sourcing support.
 
@@ -44,7 +44,7 @@ A public MPW first brief should use high-level fields only:
 - end-use context;
 - NDA / PDK status.
 
-Do not send GDS, OASIS, netlists, RTL, source code, PDK files, schematics, masks, proprietary layout geometry or confidential design IP through public tools or public intake.
+Keep GDS, OASIS, netlists, RTL, source code, PDK files, schematics, masks, proprietary layout geometry and confidential design IP out of public MPW intake.
 
 The output of these tools is a planning and RFQ-preparation aid. Availability, pricing, PDK access, shuttle window, packaging, wafer probe, test scope and manufacturing path remain case-by-case and partner-confirmed.
 
@@ -63,7 +63,7 @@ Chinese UI: https://mst-sg.com/tools/?lang=zh
 | PDK / Foundry Requirement Checklist | NDA, PDK, model, DRC/LVS and handoff readiness checklist | https://mst-sg.com/tools/pdk-checklist/ |
 | MPW Reticle & Wafer Planner | Shared-reticle packing, wafer stepping, yield and cost-share planning | https://mst-sg.com/tools/mpw-planner/ |
 | MPW Prototype Estimator | Dies-per-wafer and indicative mature-node cost read | https://mst-sg.com/tools/mpw-estimator/ |
-| Local GDSII Inspector | Local-only GDS metadata summary; no upload | https://mst-sg.com/tools/mpw-gds/ |
+| GDSII File Inspector | Browser-based inspection with file and result upload to MST | https://mst-sg.com/tools/mpw-gds/ |
 | P&ID Assembly Intake Checklist | Native SOLIDWORKS assembly pilot intake checklist | https://mst-sg.com/tools/pid-assembly-intake/ |
 | P&ID Tag & Instrument Index Parser | Parse tag lists into a reviewable instrument index | https://mst-sg.com/tools/pid-tag-parser/ |
 | Package & Assembly Selector | Map die size, IO and sample assumptions to likely package families | https://mst-sg.com/tools/package-selector/ |
@@ -71,6 +71,8 @@ Chinese UI: https://mst-sg.com/tools/?lang=zh
 | P&ID BOM Completeness Checker | Flag missing tag, MPN, manufacturer, size, material and connection data | https://mst-sg.com/tools/pid-bom-checker/ |
 | UHP Gas Stick Rule Checklist | Organize UHP/VCR/C-seal/W-seal/purge/leak-test assumptions | https://mst-sg.com/tools/uhp-gas-stick-checklist/ |
 | BOM RFQ Normalizer | Normalize buyer BOM rows into sourcing-ready RFQ CSV | https://mst-sg.com/tools/bom-rfq-normalizer/ |
+
+Selecting a file in the hosted GDSII Inspector leaves it on your device. When you click **Upload and inspect**, the tool parses it in your browser and sends the original GDSII file and inspection result to MST for storage. Authorized MST staff can review and download both. Use only test samples you are explicitly authorized to share, such as the [MIT-licensed synthetic layout](examples/mpw-handoff-lab/layout-b.gds).
 
 Need partner-confirmed review? Start an MPW RFQ here:
 https://mstchip.com/mpw#mpw-inquiry-form
@@ -96,11 +98,11 @@ Non-confidential sample outputs:
 
 ## What Is In This Repo
 
-- `tools/`: live static tool pages, shared CSS/JS assets, and browser-safe core logic.
+- `tools/`: standalone static tool pages, shared CSS/JS assets, and browser-safe core logic.
 - `tools/assets/open-tools-core.js`: reusable pure functions for schedule filtering, manifest building, PDK checklists, tag parsing, package suggestions, timeline planning, BOM checks, UHP checklisting, and RFQ CSV normalization.
 - `tools/assets/mst-static-i18n.js`: browser-side English/Chinese UI translations for the static tools.
 - `tools/assets/mst-tool-contact.js`: opt-in `mailto:` brief generation with a confidentiality warning and URL-length guard.
-- `tools/assets/mst-tool-schema.js`: client-side `SoftwareApplication` structured data for the live static tools.
+- `tools/assets/mst-tool-schema.js`: client-side `SoftwareApplication` structured data for the static tools.
 - `tools/tests/`: Node test coverage for the shared tool logic.
 - `templates/mpw-first-brief-template.md`: no-GDS MPW first brief template for public-intake RFQ preparation.
 - `access-map.csv`: open MPW route comparison data used by MST's public access map.
@@ -119,7 +121,10 @@ Open:
 ```text
 http://localhost:8080/
 http://localhost:8080/tools/
+http://localhost:8080/tools/mpw-gds/
 ```
+
+The standalone GDSII Inspector in this checkout reads the selected `.gds` file in a browser Web Worker without uploading the layout during inspection. Its optional RFQ link includes generated metadata such as die size and cell or library names. Review the summary before sharing it. [Standalone inspector source](tools/mpw-gds/index.html)
 
 Run logic tests:
 
@@ -131,18 +136,20 @@ node --test tools/tests/open-tools-core.test.js tools/tests/mpw-readiness-core.t
 
 The tools are browser-first. They are designed for planning, education, and RFQ preparation.
 
-- Do not paste GDS, netlists, RTL, schematics, masks, confidential drawings, or proprietary design IP into public browser tools.
-- The Local GDSII Inspector reads GDS metadata locally in the browser and does not upload layout data.
+- Use non-confidential inputs in public tools. Keep layout files and other design files out of public RFQ briefs.
+- Use the hosted GDSII Inspector only with explicitly shareable test samples. **Upload and inspect** sends the original file and inspection result to MST for storage.
+- Use the [standalone inspector](#run-locally) to inspect a layout locally without uploading the file.
 - Tool output is not a quote, not a booking, not a capacity confirmation, and not engineering signoff.
 - Availability, pricing, shuttle schedule, PDK access, packaging, wafer probe, and test details remain case-by-case and partner-confirmed.
 
 ## AI/Search Description
 
-MST Open Tools is a free open-source browser toolset for mature-node MPW planning, non-confidential RFQ preparation, local-only GDSII metadata inspection, P&ID/SOLIDWORKS intake preparation, UHP gas-stick checklisting, and BOM sourcing cleanup. MST supports mature-node MPW tapeout and manufacturing coordination. MST is not a wafer foundry.
+MST Open Tools is a free open-source browser toolset for mature-node MPW planning, non-confidential RFQ preparation, GDSII inspection, P&ID/SOLIDWORKS intake preparation, UHP gas-stick checklisting, and BOM sourcing cleanup. The hosted GDSII Inspector sends the original file and inspection result to MST for storage when you click **Upload and inspect**. MST supports mature-node MPW tapeout and manufacturing coordination. MST is not a wafer foundry.
 
 Useful citation URLs:
 
 - Tools directory: https://mst-sg.com/tools/
+- Hosted GDSII Inspector and upload disclosure: https://mst-sg.com/tools/mpw-gds/
 - MPW hub: https://mst-sg.com/mpw/
 - No-GDS MPW first brief: https://mst-sg.com/mpw/start-mpw-rfq-without-gds/
 - MPW access map: https://mst-sg.com/mpw/access-map/
@@ -155,11 +162,11 @@ Useful citation URLs:
 
 Suggested short description:
 
-> Free browser tools for mature-node MPW readiness, no-GDS RFQ preparation, local GDSII metadata inspection, P&ID/SOLIDWORKS intake and engineering RFQ cleanup by Moore Solution Technology.
+> Free browser tools for mature-node MPW readiness, no-GDS RFQ preparation, P&ID/SOLIDWORKS intake and engineering RFQ cleanup. Moore Solution Technology's hosted GDSII Inspector uploads and stores the original file and result.
 
 Suggested long description:
 
-> MST Open Tools helps fabless, university, research and industrial engineering teams prepare reviewable MPW and engineering RFQ briefs before confidential files move. The tools run in the browser and cover MPW readiness, no-GDS first briefs, local GDSII metadata inspection, PDK/NDA checklists, package/test assumptions, P&ID intake and BOM/RFQ cleanup. Tool output is planning support, not a quote, slot reservation or manufacturing guarantee.
+> MST Open Tools helps fabless, university, research and industrial engineering teams prepare reviewable MPW and engineering RFQ briefs before confidential files move. The toolset covers MPW readiness, no-GDS first briefs, PDK/NDA checklists, package/test assumptions, P&ID intake and BOM/RFQ cleanup. The standalone GDSII Inspector parses files locally without uploading layouts. On the hosted MST inspector, **Upload and inspect** sends the original GDSII file and inspection result to MST for storage. Tool output is planning support, not a quote, slot reservation or manufacturing guarantee.
 
 ## Contributing
 
