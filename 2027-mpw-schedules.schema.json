@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "2027 MPW Schedule Reference",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "year", "schedules"],
+  "properties": {
+    "$schema": { "const": "./2027-mpw-schedules.schema.json" },
+    "schema_version": { "const": 1 },
+    "year": { "const": 2027 },
+    "schedules": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/schedule" }
+    }
+  },
+  "$defs": {
+    "schedule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "route",
+        "foundry",
+        "node_nm",
+        "milestone",
+        "date",
+        "date_granularity",
+        "status",
+        "source_publisher",
+        "source_url",
+        "source_verified_on"
+      ],
+      "properties": {
+        "route": { "type": "string", "minLength": 1 },
+        "foundry": { "type": "string", "minLength": 1 },
+        "node_nm": { "type": "integer", "minimum": 1 },
+        "milestone": { "enum": ["shuttle_window", "tapeout"] },
+        "date": { "type": "string" },
+        "date_granularity": { "enum": ["month", "day"] },
+        "status": { "enum": ["planned", "confirmed"] },
+        "source_publisher": { "type": "string", "minLength": 1 },
+        "source_url": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "source_verified_on": { "type": "string", "format": "date" }
+      },
+      "if": {
+        "properties": { "date_granularity": { "const": "day" } }
+      },
+      "then": {
+        "properties": { "date": { "pattern": "^2027-[0-9]{2}-[0-9]{2}$", "format": "date" } }
+      },
+      "else": {
+        "properties": { "date": { "maxLength": 7, "pattern": "^2027-(0[1-9]|1[0-2])$" } }
+      }
+    }
+  }
+}
