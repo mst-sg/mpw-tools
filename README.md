@@ -18,6 +18,17 @@ MST is not a wafer foundry and does not manufacture wafers directly. These tools
 
 [Check the report revision in your browser](https://mst-sg.com/tools/report-revision-check/?utm_source=github&utm_medium=repository&utm_campaign=sg_mpw_handoff_lab). Everything in the pack is synthetic and MIT licensed. No DRC/LVS was run; matching metadata is not foundry signoff. The SG website is released from its separate canonical repository; this repository distributes public examples.
 
+## 2027 MPW Schedule Reference
+
+[Schedule JSON](2027-mpw-schedules.json) · [JSON Schema](2027-mpw-schedules.schema.json)
+
+Each row identifies a route, foundry, process node and milestone, with the public source and the date we checked it. Import dates at their published precision.
+
+- `shuttle_window` uses month precision (`YYYY-MM`) for the HHGrace 55nm and 90nm windows published by MST. [MST schedule](https://mst-sg.com/mpw/)
+- `tapeout` uses day precision (`YYYY-MM-DD`) for the TSMC 55nm date in Europractice's detailed schedule. [Europractice schedule](https://europractice-ic.com/wp-content/uploads/2026/11/TSMC_EP_MPW_schedule_2027_V1_0-1.pdf#page=5)
+
+All entries in this snapshot are `planned`. Use `confirmed` only when the source explicitly confirms the milestone. Check the provider's current schedule and confirm eligibility and availability for your project before relying on a date.
+
 ## Who This Is For
 
 These tools are intended for:

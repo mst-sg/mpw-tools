@@ -1,0 +1,91 @@
+{
+  "$schema": "./2027-mpw-schedules.schema.json",
+  "schema_version": 1,
+  "year": 2027,
+  "schedules": [
+    {
+      "route": "MST coordination route",
+      "foundry": "HHGrace",
+      "node_nm": 55,
+      "milestone": "shuttle_window",
+      "date": "2027-01",
+      "date_granularity": "month",
+      "status": "planned",
+      "source_publisher": "MST",
+      "source_url": "https://mst-sg.com/mpw/",
+      "source_verified_on": "2026-11-24"
+    },
+    {
+      "route": "MST coordination route",
+      "foundry": "HHGrace",
+      "node_nm": 55,
+      "milestone": "shuttle_window",
+      "date": "2027-05",
+      "date_granularity": "month",
+      "status": "planned",
+      "source_publisher": "MST",
+      "source_url": "https://mst-sg.com/mpw/",
+      "source_verified_on": "2026-11-24"
+    },
+    {
+      "route": "MST coordination route",
+      "foundry": "HHGrace",
+      "node_nm": 55,
+      "milestone": "shuttle_window",
+      "date": "2027-09",
+      "date_granularity": "month",
+      "status": "planned",
+      "source_publisher": "MST",
+      "source_url": "https://mst-sg.com/mpw/",
+      "source_verified_on": "2026-11-24"
+    },
+    {
+      "route": "MST coordination route",
+      "foundry": "HHGrace",
+      "node_nm": 90,
+      "milestone": "shuttle_window",
+      "date": "2027-01",
+      "date_granularity": "month",
+      "status": "planned",
+      "source_publisher": "MST",
+      "source_url": "https://mst-sg.com/mpw/",
+      "source_verified_on": "2026-11-24"
+    },
+    {
+      "route": "MST coordination route",
+      "foundry": "HHGrace",
+      "node_nm": 90,
+      "milestone": "shuttle_window",
+      "date": "2027-05",
+      "date_granularity": "month",
+      "status": "planned",
+      "source_publisher": "MST",
+      "source_url": "https://mst-sg.com/mpw/",
+      "source_verified_on": "2026-11-24"
+    },
+    {
+      "route": "MST coordination route",
+      "foundry": "HHGrace",
+      "node_nm": 90,
+      "milestone": "shuttle_window",
+      "date": "2027-09",
+      "date_granularity": "month",
+      "status": "planned",
+      "source_publisher": "MST",
+      "source_url": "https://mst-sg.com/mpw/",
+      "source_verified_on": "2026-11-24"
+    },
+    {
+      "route": "Europractice",
+      "foundry": "TSMC",
+      "node_nm": 55,
+      "milestone": "tapeout",
+      "date": "2027-05-18",
+      "date_granularity": "day",
+      "status": "planned",
+      "source_publisher": "Europractice",
+      "source_url": "https://europractice-ic.com/wp-content/uploads/2026/11/TSMC_EP_MPW_schedule_2027_V1_0-1.pdf#page=5",
+      "source_verified_on": "2026-11-24"
+    }
+  ]
+}
