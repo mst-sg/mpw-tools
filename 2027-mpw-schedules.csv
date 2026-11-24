@@ -1,0 +1,14 @@
+route,foundry,node_nm,milestone,date,date_granularity,status,source_publisher,source_url,source_verified_on
+MST coordination route,HHGrace,55,shuttle_window,2027-01,month,planned,MST,https://mst-sg.com/mpw/,2026-11-24
+MST coordination route,HHGrace,55,shuttle_window,2027-05,month,planned,MST,https://mst-sg.com/mpw/,2026-11-24
+MST coordination route,HHGrace,55,shuttle_window,2027-09,month,planned,MST,https://mst-sg.com/mpw/,2026-11-24
+MST coordination route,HHGrace,90,shuttle_window,2027-01,month,planned,MST,https://mst-sg.com/mpw/,2026-11-24
+MST coordination route,HHGrace,90,shuttle_window,2027-05,month,planned,MST,https://mst-sg.com/mpw/,2026-11-24
+MST coordination route,HHGrace,90,shuttle_window,2027-09,month,planned,MST,https://mst-sg.com/mpw/,2026-11-24
+Europractice,TSMC,55,tapeout,2027-05-18,day,planned,Europractice,https://europractice-ic.com/wp-content/uploads/2026/11/TSMC_EP_MPW_schedule_2027_V1_0-1.pdf#page=5,2026-11-24
+Europractice UMC L180 Logic GII / Mixed-Mode / RF,UMC,180,gds_submission,2027-04-14,day,planned,Europractice,https://europractice-ic.com/schedules-prices-2027-2/,2026-11-24
+Europractice UMC L180 Logic GII / Mixed-Mode / RF,UMC,180,gds_submission,2027-10-13,day,planned,Europractice,https://europractice-ic.com/schedules-prices-2027-2/,2026-11-24
+X-FAB XT018 BCD-on-SOI,X-FAB,180,tape_in,2027-02-01,day,planned,X-FAB,https://www.xfab.com/manufacturing/prototyping,2026-11-24
+X-FAB XT018 BCD-on-SOI,X-FAB,180,tape_in,2027-04-26,day,planned,X-FAB,https://www.xfab.com/manufacturing/prototyping,2026-11-24
+X-FAB XT018 BCD-on-SOI,X-FAB,180,tape_in,2027-06-14,day,planned,X-FAB,https://www.xfab.com/manufacturing/prototyping,2026-11-24
+X-FAB XT018 BCD-on-SOI,X-FAB,180,tape_in,2027-11-08,day,planned,X-FAB,https://www.xfab.com/manufacturing/prototyping,2026-11-24

@@ -6,7 +6,7 @@
   "required": ["schema_version", "year", "schedules"],
   "properties": {
     "$schema": { "const": "./2027-mpw-schedules.schema.json" },
-    "schema_version": { "const": 1 },
+    "schema_version": { "enum": [1, 2] },
     "year": { "const": 2027 },
     "schedules": {
       "type": "array",
@@ -35,7 +35,7 @@
         "route": { "type": "string", "minLength": 1 },
         "foundry": { "type": "string", "minLength": 1 },
         "node_nm": { "type": "integer", "minimum": 1 },
-        "milestone": { "enum": ["shuttle_window", "tapeout"] },
+        "milestone": { "enum": ["shuttle_window", "tapeout", "tape_in", "gds_submission"] },
         "date": { "type": "string" },
         "date_granularity": { "enum": ["month", "day"] },
         "status": { "enum": ["planned", "confirmed"] },

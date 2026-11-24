@@ -11,5 +11,6 @@ jobs:
         with:
           python-version: '3.12'
       - run: python examples/mpw-handoff-lab/verify.py
+      - run: python scripts/export-mpw-schedules.py --check
       - run: pip install -r examples/mpw-handoff-lab/requirements.txt
       - run: python examples/mpw-handoff-lab/inspect.py
