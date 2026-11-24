@@ -31,7 +31,13 @@ Each row identifies a route, foundry, process node and milestone, with the publi
 
 All entries in this snapshot are `planned`. Use `confirmed` only when the source explicitly confirms the milestone. Check the provider's current schedule and confirm eligibility and availability for your project before relying on a date.
 
-For a 55nm or 90nm project, the [MSTchip schedule and planning guide](https://mstchip.com/mpw/guides/2027-mature-node-mpw-schedule) explains which milestone to put in your project brief. For the Europractice and X-FAB rows, use the provider link to enquire about access.
+| Project question | What to check |
+| --- | --- |
+| Can an embedded-flash IP test chip run on this process? | Match the memory macro, programming conditions and available PDK to the specific run. [55nm and 90nm eFlash guide](https://mstchip.com/mpw/guides/55nm-90nm-eflash-mpw-guide) |
+| Which process can prototype a 90nm power-management ASIC? | Compare voltage domains, isolation and supported devices before reserving area. [BCD foundry and shuttle comparison](https://mstchip.com/mpw/guides/bcd-mpw-shuttle-guide) |
+| Which 2027 date belongs in the tapeout plan? | Record the reservation, design-data and sample milestones separately. [2027 mature-node shuttle guide](https://mstchip.com/mpw/guides/2027-mature-node-mpw-schedule) |
+
+For an HHGrace feasibility enquiry, use the link in the relevant guide. For Europractice and X-FAB runs, use the operator contacts in the source table.
 
 The JSON is the source for the Markdown and CSV. After checking a provider and updating its rows, run `python3 scripts/export-mpw-schedules.py`; CI checks the exports for drift. Version 2 adds the GDS submission and tape-in milestone names. The original month-level rows keep their original precision.
 
