@@ -20,14 +20,20 @@ MST is not a wafer foundry and does not manufacture wafers directly. These tools
 
 ## 2027 MPW Schedule Reference
 
-[Schedule JSON](2027-mpw-schedules.json) · [JSON Schema](2027-mpw-schedules.schema.json)
+[Read the 2027 shuttle table](2027-mpw-schedules.md) · [Download the CSV](2027-mpw-schedules.csv) · [Schedule JSON](2027-mpw-schedules.json) · [JSON Schema](2027-mpw-schedules.schema.json)
 
 Each row identifies a route, foundry, process node and milestone, with the public source and the date we checked it. Import dates at their published precision.
 
 - `shuttle_window` uses month precision (`YYYY-MM`) for the HHGrace 55nm and 90nm windows published by MST. [MST schedule](https://mst-sg.com/mpw/)
 - `tapeout` uses day precision (`YYYY-MM-DD`) for the TSMC 55nm date in Europractice's detailed schedule. [Europractice schedule](https://europractice-ic.com/wp-content/uploads/2026/11/TSMC_EP_MPW_schedule_2027_V1_0-1.pdf#page=5)
+- `gds_submission` marks Europractice's UMC L180 GDS deadline. Its general MPW table calls for registration at least four weeks earlier. [Europractice 2027 general MPW schedule](https://europractice-ic.com/schedules-prices-2027-2/)
+- `tape_in` is X-FAB's XT018 **Tape-In** column. The provider lists later data-release and sample dates separately, with process options varying by run. [X-FAB prototyping schedule](https://www.xfab.com/manufacturing/prototyping)
 
 All entries in this snapshot are `planned`. Use `confirmed` only when the source explicitly confirms the milestone. Check the provider's current schedule and confirm eligibility and availability for your project before relying on a date.
+
+For a 55nm or 90nm project, the [MSTchip schedule and planning guide](https://mstchip.com/mpw/guides/2027-mature-node-mpw-schedule) explains which milestone to put in your project brief. For the Europractice and X-FAB rows, use the provider link to enquire about access.
+
+The JSON is the source for the Markdown and CSV. After checking a provider and updating its rows, run `python3 scripts/export-mpw-schedules.py`; CI checks the exports for drift. Version 2 adds the GDS submission and tape-in milestone names. The original month-level rows keep their original precision.
 
 ## Who This Is For
 

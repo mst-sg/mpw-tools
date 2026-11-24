@@ -1,6 +1,6 @@
 {
   "$schema": "./2027-mpw-schedules.schema.json",
-  "schema_version": 1,
+  "schema_version": 2,
   "year": 2027,
   "schedules": [
     {
@@ -85,6 +85,78 @@
       "status": "planned",
       "source_publisher": "Europractice",
       "source_url": "https://europractice-ic.com/wp-content/uploads/2026/11/TSMC_EP_MPW_schedule_2027_V1_0-1.pdf#page=5",
+      "source_verified_on": "2026-11-24"
+    },
+    {
+      "route": "Europractice UMC L180 Logic GII / Mixed-Mode / RF",
+      "foundry": "UMC",
+      "node_nm": 180,
+      "milestone": "gds_submission",
+      "date": "2027-04-14",
+      "date_granularity": "day",
+      "status": "planned",
+      "source_publisher": "Europractice",
+      "source_url": "https://europractice-ic.com/schedules-prices-2027-2/",
+      "source_verified_on": "2026-11-24"
+    },
+    {
+      "route": "Europractice UMC L180 Logic GII / Mixed-Mode / RF",
+      "foundry": "UMC",
+      "node_nm": 180,
+      "milestone": "gds_submission",
+      "date": "2027-10-13",
+      "date_granularity": "day",
+      "status": "planned",
+      "source_publisher": "Europractice",
+      "source_url": "https://europractice-ic.com/schedules-prices-2027-2/",
+      "source_verified_on": "2026-11-24"
+    },
+    {
+      "route": "X-FAB XT018 BCD-on-SOI",
+      "foundry": "X-FAB",
+      "node_nm": 180,
+      "milestone": "tape_in",
+      "date": "2027-02-01",
+      "date_granularity": "day",
+      "status": "planned",
+      "source_publisher": "X-FAB",
+      "source_url": "https://www.xfab.com/manufacturing/prototyping",
+      "source_verified_on": "2026-11-24"
+    },
+    {
+      "route": "X-FAB XT018 BCD-on-SOI",
+      "foundry": "X-FAB",
+      "node_nm": 180,
+      "milestone": "tape_in",
+      "date": "2027-04-26",
+      "date_granularity": "day",
+      "status": "planned",
+      "source_publisher": "X-FAB",
+      "source_url": "https://www.xfab.com/manufacturing/prototyping",
+      "source_verified_on": "2026-11-24"
+    },
+    {
+      "route": "X-FAB XT018 BCD-on-SOI",
+      "foundry": "X-FAB",
+      "node_nm": 180,
+      "milestone": "tape_in",
+      "date": "2027-06-14",
+      "date_granularity": "day",
+      "status": "planned",
+      "source_publisher": "X-FAB",
+      "source_url": "https://www.xfab.com/manufacturing/prototyping",
+      "source_verified_on": "2026-11-24"
+    },
+    {
+      "route": "X-FAB XT018 BCD-on-SOI",
+      "foundry": "X-FAB",
+      "node_nm": 180,
+      "milestone": "tape_in",
+      "date": "2027-11-08",
+      "date_granularity": "day",
+      "status": "planned",
+      "source_publisher": "X-FAB",
+      "source_url": "https://www.xfab.com/manufacturing/prototyping",
       "source_verified_on": "2026-11-24"
     }
   ]
